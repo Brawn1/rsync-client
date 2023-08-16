@@ -3,13 +3,11 @@ version: "3"
 services:
   rsync_client:
     restart: on-failure
-    image: guenterbailey/rsync-client:latest
-    build: .
+    image: guenterbailey/rsync-client:bookworm
     volumes:
       - ./config:/config
       - roothome:/root:rw
-    command: "ssh -o StrictHostKeyChecking=no -p 23 u164582-sub1@u164582.your-storagebox.de 'ls'"
-#    command: "ls -lah /root/.ssh/"
+    command: "ls -lah /root/.ssh/"
 
 volumes:
   roothome:

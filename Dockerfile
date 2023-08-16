@@ -1,4 +1,4 @@
-FROM debian:bullseye-slim
+FROM debian:bookworm-slim
 MAINTAINER Günter Bailey <guenter.brawn@gmail.com>
 
 ENV LANG C.UTF-8
